@@ -40,6 +40,3 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /usr/bin/wireguard-go /usr/bin/wg* /usr/bin/
-COPY entrypoint.sh /entrypoint.sh
-
-CMD ["/entrypoint.sh"]
